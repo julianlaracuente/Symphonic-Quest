@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ceg8v31811vbm"]
+
+[ext_resource type="Script" uid="uid://8b88ky2jhrgv" path="res://scripts/hero.gd" id="1_3uyx6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3uyx6"]
+
+[sub_resource type="Animation" id="Animation_3uyx6"]
+resource_name = "attack"
+
+[sub_resource type="Animation" id="Animation_yvbpl"]
+resource_name = "death"
+
+[sub_resource type="Animation" id="Animation_06baw"]
+resource_name = "hit"
+
+[sub_resource type="Animation" id="Animation_mv13s"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7pyx"]
+_data = {
+&"attack": SubResource("Animation_3uyx6"),
+&"death": SubResource("Animation_yvbpl"),
+&"hit": SubResource("Animation_06baw"),
+&"idle": SubResource("Animation_mv13s")
+}
+
+[node name="Hero" type="CharacterBody3D" unique_id=271870303]
+script = ExtResource("1_3uyx6")
+health = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=32472431]
+shape = SubResource("SphereShape3D_3uyx6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1141724235]
+libraries/ = SubResource("AnimationLibrary_w7pyx")
