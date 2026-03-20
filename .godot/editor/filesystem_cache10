@@ -1,0 +1,9 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1773971859
+icon.svg::CompressedTexture2D::5107917845470707233::1773966287::1773971860::1::::<><><>0<>0<>f1d1da17eb7665326b9ea7c31b48c88d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://scenes/::1773971042
+hero.tscn::PackedScene::5068025683249865234::1773971042::0::1::::<><><>0<>0<><>::uid://8b88ky2jhrgv::::res://scripts/hero.gd
+test.tscn::PackedScene::2580434897759582626::1773968381::0::1::::<><><>0<>0<><>::uid://ceg8v31811vbm::::res://scenes/hero.tscn<>uid://cglqbgixvjhww::::res://scripts/test.gd
+::res://scripts/::1773968402
+hero.gd::GDScript::2320359373317169229::1773968368::0::1::::Hero<>CharacterBody3D<><>0<>0<><>::
+test.gd::GDScript::5217656170759198870::1773968402::0::1::::<>Hero<><>0<>0<><>::
