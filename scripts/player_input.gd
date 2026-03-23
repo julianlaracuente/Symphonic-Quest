@@ -23,11 +23,11 @@ func _process(delta):
 			
 func input_manager():
 	if in_selection:
-		if Input.is_action_just_pressed("ui_down"):
+		if Input.is_action_just_pressed("down"):
 			current_ui_index = (current_ui_index + 1) % party.size()
 			update_selection()
 			
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("up"):
 			current_ui_index = (current_ui_index - 1 + party.size()) % party.size()
 			update_selection()
 		if Input.is_action_just_pressed("enter"):
@@ -36,10 +36,10 @@ func input_manager():
 			make_visible.emit()
 			update_options()
 	elif in_options:
-		if Input.is_action_just_pressed("ui_down"):
+		if Input.is_action_just_pressed("down"):
 			current_option_index = (current_option_index + 1) % options.size()
 			update_options()
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("up"):
 			current_option_index = (current_option_index - 1) % options.size()
 			update_options()
 		if Input.is_action_just_pressed("enter"):

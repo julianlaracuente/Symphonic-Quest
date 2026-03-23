@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://b5ccnqifxjntl"]
+
+[ext_resource type="Texture2D" uid="uid://bpepm4rf4ims2" path="res://assets/StartScreen/background.jpg" id="1_he1sj"]
+[ext_resource type="Script" uid="uid://doe2e87jiltyn" path="res://scripts/start_screen.gd" id="1_r2jwc"]
+[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="2_r2jwc"]
+[ext_resource type="Texture2D" uid="uid://djc7daqyy4v6" path="res://assets/Arrow.png" id="3_hm208"]
+[ext_resource type="AudioStream" uid="uid://c1c4uuwswi7t7" path="res://assets/StartScreen/MainMenuMusic.wav" id="5_hm208"]
+[ext_resource type="AudioStream" uid="uid://dwl3urh4d7bv1" path="res://assets/StartScreen/Select.wav" id="6_5pab1"]
+
+[sub_resource type="Animation" id="Animation_r2jwc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hm208"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5pab1"]
+resource_name = "fade_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o30b1"]
+_data = {
+&"RESET": SubResource("Animation_r2jwc"),
+&"fade_in": SubResource("Animation_hm208"),
+&"fade_out": SubResource("Animation_5pab1")
+}
+
+[node name="StartScreen" type="Control" unique_id=680219462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r2jwc")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1205399177]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_he1sj")
+expand_mode = 3
+
+[node name="Text" type="Node2D" parent="." unique_id=748859872]
+position = Vector2(0, 230)
+
+[node name="Start_Exit" type="Label" parent="Text" unique_id=2044347767]
+texture_filter = 1
+offset_left = 918.0
+offset_top = 524.0
+offset_right = 1020.0
+offset_bottom = 619.0
+theme_override_fonts/font = ExtResource("2_r2jwc")
+theme_override_font_sizes/font_size = 34
+text = "Start
+Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="arrow1" type="Sprite2D" parent="Text" unique_id=314154420]
+position = Vector2(874, 547)
+rotation = -1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("3_hm208")
+
+[node name="arrow2" type="Sprite2D" parent="Text" unique_id=2089314918]
+position = Vector2(874, 597)
+rotation = -1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("3_hm208")
+
+[node name="Title" type="Label" parent="Text" unique_id=1281925887]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 404.0
+offset_top = 152.0
+offset_right = 1560.0
+offset_bottom = 850.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_r2jwc")
+theme_override_font_sizes/font_size = 100
+text = "SYMPHONIC QUEST"
+
+[node name="FadeIn_Out" type="TextureRect" parent="." unique_id=1006129185]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_he1sj")
+expand_mode = 3
+
+[node name="FadeAnimationPlayer" type="AnimationPlayer" parent="FadeIn_Out" unique_id=2095204182]
+libraries/ = SubResource("AnimationLibrary_o30b1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1465727729]
+stream = ExtResource("5_hm208")
+volume_db = -10.0
+
+[node name="SelectFX" type="AudioStreamPlayer" parent="." unique_id=1178415353]
+stream = ExtResource("6_5pab1")
+
+[connection signal="animation_finished" from="FadeIn_Out/FadeAnimationPlayer" to="." method="_on_fade_animation_player_animation_finished"]
