@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qfakkt6qw5gj"]
 
 [ext_resource type="Script" uid="uid://binwys1ah8gmj" path="res://scripts/player_input.gd" id="1_l1alw"]
-[ext_resource type="Texture2D" uid="uid://djc7daqyy4v6" path="res://assets/Ninja Adventure - Asset Pack/Ui/Arrow.png" id="2_rr3ke"]
+[ext_resource type="Texture2D" uid="uid://djc7daqyy4v6" path="res://assets/Arrow.png" id="2_rr3ke"]
 
 [node name="PlayerInput" type="Node" unique_id=418061548]
 script = ExtResource("1_l1alw")

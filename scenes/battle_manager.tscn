@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bc08nd651b2eg" path="res://scenes/test.tscn" id="1_7wf3v"]
 [ext_resource type="PackedScene" uid="uid://br4cn8qn4o5gb" path="res://scenes/hero_ui.tscn" id="2_4wxy3"]
 [ext_resource type="Script" uid="uid://bs4iogwg5nekb" path="res://scripts/options.gd" id="3_lhjl6"]
-[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="4_4wxy3"]
+[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="4_4wxy3"]
 [ext_resource type="PackedScene" uid="uid://qfakkt6qw5gj" path="res://scenes/player_input.tscn" id="4_h4tux"]
 
 [node name="BattleManager" type="Node3D" unique_id=671835788]

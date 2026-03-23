@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://br4cn8qn4o5gb"]
 
 [ext_resource type="Script" uid="uid://ce1daybnkmh2m" path="res://scripts/hero_ui.gd" id="1_ruxx6"]
-[ext_resource type="Texture2D" uid="uid://dqaw2wt42da3w" path="res://assets/Ninja Adventure - Asset Pack/Ui/Receptacle/Receptacle Rectangle/ProgressWhite.png" id="2_iitki"]
-[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="2_wsyrq"]
+[ext_resource type="Texture2D" uid="uid://dqaw2wt42da3w" path="res://assets/ProgressWhite.png" id="2_iitki"]
+[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="2_wsyrq"]
 
 [node name="HeroUI" type="Control" unique_id=661964241]
 layout_mode = 3
