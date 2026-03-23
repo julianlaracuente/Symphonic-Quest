@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ceg8v31811vbm"]
 
 [ext_resource type="Script" uid="uid://8b88ky2jhrgv" path="res://scripts/hero.gd" id="1_3uyx6"]
+[ext_resource type="Script" uid="uid://b0r07s43ypcuo" path="res://scripts/atb_timer.gd" id="2_yvbpl"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3uyx6"]
 
@@ -33,3 +34,9 @@ shape = SubResource("SphereShape3D_3uyx6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1141724235]
 libraries/ = SubResource("AnimationLibrary_w7pyx")
+
+[node name="ATBTimer" type="Timer" parent="." unique_id=1097848991]
+one_shot = true
+script = ExtResource("2_yvbpl")
+
+[connection signal="timeout" from="ATBTimer" to="." method="_on_timer_timeout"]

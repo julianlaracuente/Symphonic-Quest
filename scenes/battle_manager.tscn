@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://ch6iqb0n3ecpg"]
+
+[ext_resource type="PackedScene" uid="uid://bc08nd651b2eg" path="res://scenes/test.tscn" id="1_7wf3v"]
+[ext_resource type="PackedScene" uid="uid://br4cn8qn4o5gb" path="res://scenes/hero_ui.tscn" id="2_4wxy3"]
+[ext_resource type="Script" uid="uid://bs4iogwg5nekb" path="res://scripts/options.gd" id="3_lhjl6"]
+[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/Ninja Adventure - Asset Pack/Ui/Font/NormalFont.ttf" id="4_4wxy3"]
+[ext_resource type="PackedScene" uid="uid://qfakkt6qw5gj" path="res://scenes/player_input.tscn" id="4_h4tux"]
+
+[node name="BattleManager" type="Node3D" unique_id=671835788]
+
+[node name="Julian" parent="." unique_id=271870303 instance=ExtResource("1_7wf3v")]
+max_health = 50
+
+[node name="Fabian" parent="." unique_id=2124232109 instance=ExtResource("1_7wf3v")]
+max_health = 50
+atb_time = 20.0
+
+[node name="Yadriel" parent="." unique_id=809557965 instance=ExtResource("1_7wf3v")]
+max_health = 50
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2099249352]
+
+[node name="Rectangles" type="Node" parent="UI" unique_id=171011014]
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Rectangles" unique_id=1715651432]
+offset_left = -7.0
+offset_top = 840.0
+offset_right = 624.0
+offset_bottom = 1088.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/Rectangles" unique_id=1075974083]
+offset_top = 848.0
+offset_right = 624.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0.6039216, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="UI/Rectangles" unique_id=1866065774]
+offset_left = 624.0
+offset_top = 840.0
+offset_right = 1920.0
+offset_bottom = 1088.0
+
+[node name="ColorRect4" type="ColorRect" parent="UI/Rectangles" unique_id=331057124]
+offset_left = 631.0
+offset_top = 848.0
+offset_right = 1912.0
+offset_bottom = 1080.0
+color = Color(0.07058824, 0.07058824, 0.6313726, 1)
+
+[node name="HeroUI" parent="UI" unique_id=661964241 node_paths=PackedStringArray("hero") instance=ExtResource("2_4wxy3")]
+offset_left = 106.0
+offset_top = 888.0
+offset_right = -116.0
+offset_bottom = 639.0
+hero = NodePath("../../Julian")
+
+[node name="HeroUI2" parent="UI" unique_id=2028912868 node_paths=PackedStringArray("hero") instance=ExtResource("2_4wxy3")]
+offset_left = 106.0
+offset_top = 968.0
+offset_right = -116.0
+offset_bottom = 719.0
+hero = NodePath("../../Fabian")
+
+[node name="HeroUI3" parent="UI" unique_id=1560387471 node_paths=PackedStringArray("hero") instance=ExtResource("2_4wxy3")]
+offset_left = 104.0
+offset_top = 1040.0
+offset_right = -118.0
+offset_bottom = 791.0
+hero = NodePath("../../Yadriel")
+
+[node name="Options" type="Control" parent="UI" unique_id=1615615152]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 456.0
+offset_top = 808.0
+offset_right = 496.0
+offset_bottom = 848.0
+scale = Vector2(1.1167752, 1.2435694)
+script = ExtResource("3_lhjl6")
+
+[node name="Rectangles" type="Control" parent="UI/Options" unique_id=1571457772]
+anchors_preset = 0
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Options/Rectangles" unique_id=2056330029]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -48.0
+offset_right = 187.0
+offset_bottom = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/Options/Rectangles" unique_id=1767170716]
+layout_mode = 0
+offset_left = -71.63483
+offset_top = -38.59857
+offset_right = 179.08707
+offset_bottom = 192.9928
+color = Color(0, 0, 0.6039216, 1)
+
+[node name="Attack" type="Label" parent="UI/Options" unique_id=1972522347]
+layout_mode = 0
+offset_top = -8.0
+offset_right = 109.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("4_4wxy3")
+theme_override_font_sizes/font_size = 35
+text = "Attack"
+
+[node name="Magic" type="Label" parent="UI/Options" unique_id=1997294250]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 99.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("4_4wxy3")
+theme_override_font_sizes/font_size = 35
+text = "Magic"
+
+[node name="Item" type="Label" parent="UI/Options" unique_id=1479011961]
+layout_mode = 0
+offset_top = 135.0
+offset_right = 78.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("4_4wxy3")
+theme_override_font_sizes/font_size = 35
+text = "Item"
+
+[node name="PlayerInput" parent="UI" unique_id=418061548 node_paths=PackedStringArray("party", "options") instance=ExtResource("4_h4tux")]
+party = [NodePath("../HeroUI"), NodePath("../HeroUI2"), NodePath("../HeroUI3")]
+options = [NodePath("../Options/Attack"), NodePath("../Options/Magic"), NodePath("../Options/Item")]
+
+[connection signal="make_visible" from="UI/PlayerInput" to="UI/Options" method="_on_player_input_make_visible"]

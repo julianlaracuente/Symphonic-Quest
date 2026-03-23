@@ -7,6 +7,7 @@
 
 [node name="test" unique_id=271870303 instance=ExtResource("1_errlg")]
 script = ExtResource("2_bl13t")
+health = 50
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=32472431]
 shape = SubResource("BoxShape3D_errlg")
