@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://nxp86kyhmb6y"]
+
+[ext_resource type="Script" uid="uid://bnjp48cy8dmuh" path="res://scripts/end_screen.gd" id="1_plosh"]
+[ext_resource type="Texture2D" uid="uid://bpepm4rf4ims2" path="res://assets/StartScreen/background.jpg" id="2_plosh"]
+[ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="3_4j4el"]
+[ext_resource type="AudioStream" uid="uid://d2qmkcy3omc3g" path="res://assets/EndScreen/LoseThemeStart.wav" id="4_vj8vg"]
+[ext_resource type="Texture2D" uid="uid://djc7daqyy4v6" path="res://assets/Arrow.png" id="4_wke0n"]
+[ext_resource type="AudioStream" uid="uid://dwl3urh4d7bv1" path="res://assets/StartScreen/Select.wav" id="6_fix67"]
+[ext_resource type="AudioStream" uid="uid://c83lvahughgwt" path="res://assets/EndScreen/LoseThemeLoop.wav" id="6_plosh"]
+[ext_resource type="AudioStream" uid="uid://klpn6ibrdj6j" path="res://assets/EndScreen/Track_#4.wav" id="8_4j4el"]
+
+[sub_resource type="Animation" id="Animation_r2jwc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hm208"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5pab1"]
+resource_name = "fade_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o30b1"]
+_data = {
+&"RESET": SubResource("Animation_r2jwc"),
+&"fade_in": SubResource("Animation_hm208"),
+&"fade_out": SubResource("Animation_5pab1")
+}
+
+[node name="EndScreen" type="Control" unique_id=680219462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_plosh")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1205399177]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_plosh")
+expand_mode = 3
+
+[node name="Text" type="Node2D" parent="." unique_id=748859872]
+position = Vector2(0, 230)
+
+[node name="Restart_Exit" type="Label" parent="Text" unique_id=2044347767]
+texture_filter = 1
+offset_left = 918.0
+offset_top = 524.0
+offset_right = 1020.0
+offset_bottom = 619.0
+theme_override_fonts/font = ExtResource("3_4j4el")
+theme_override_font_sizes/font_size = 34
+text = "Restart
+Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="arrow1" type="Sprite2D" parent="Text" unique_id=314154420]
+position = Vector2(874, 547)
+rotation = -1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("4_wke0n")
+
+[node name="arrow2" type="Sprite2D" parent="Text" unique_id=2089314918]
+position = Vector2(874, 597)
+rotation = -1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("4_wke0n")
+
+[node name="Win_Lose" type="Label" parent="Text" unique_id=1281925887]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 698.0
+offset_top = 152.0
+offset_right = 1560.0
+offset_bottom = 850.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_4j4el")
+theme_override_font_sizes/font_size = 100
+text = "SUCCESS
+FAILURE"
+
+[node name="FadeIn_Out" type="TextureRect" parent="." unique_id=1006129185]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_plosh")
+expand_mode = 3
+
+[node name="FadeAnimationPlayer" type="AnimationPlayer" parent="FadeIn_Out" unique_id=2095204182]
+libraries/ = SubResource("AnimationLibrary_o30b1")
+
+[node name="LoseThemeStart" type="AudioStreamPlayer" parent="." unique_id=1465727729]
+stream = ExtResource("4_vj8vg")
+volume_db = -10.0
+
+[node name="SelectFX" type="AudioStreamPlayer" parent="." unique_id=1178415353]
+stream = ExtResource("6_fix67")
+
+[node name="LoseThemeLoop" type="AudioStreamPlayer" parent="." unique_id=2091823048]
+stream = ExtResource("6_plosh")
+
+[node name="WinThemeLoop" type="AudioStreamPlayer" parent="." unique_id=635738522]
+stream = ExtResource("8_4j4el")
+
+[connection signal="animation_finished" from="FadeIn_Out/FadeAnimationPlayer" to="." method="_on_fade_animation_player_animation_finished"]
+[connection signal="finished" from="LoseThemeStart" to="." method="_on_lose_theme_start_finished"]
