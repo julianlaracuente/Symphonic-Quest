@@ -36,18 +36,19 @@ func input_manager():
 			make_visible.emit()
 			update_options()
 	elif in_options:
-		if Input.is_action_just_pressed("down"):
-			current_option_index = (current_option_index + 1) % options.size()
-			update_options()
-		if Input.is_action_just_pressed("up"):
-			current_option_index = (current_option_index - 1) % options.size()
-			update_options()
 		if Input.is_action_just_pressed("enter"):
 			in_options = false
 			in_selection = true
 			make_visible.emit()
+			current_hero_ui.hero.attack()
 			update_selection()
-			options_manager()
+		elif Input.is_action_just_pressed("escape"):
+			in_options = false
+			in_selection = true
+			make_visible.emit()
+			update_selection()
+
+
 			
 func update_selection():
 	current_hero_ui = party[current_ui_index]
@@ -56,7 +57,7 @@ func update_selection():
 	print("currently selecting: ", current_hero_ui.name)
 
 func update_options():
-	current_option = options[current_option_index]
+	current_option = options[0]
 	if arrow_sprite:
 		arrow_sprite.global_position = current_option.global_position + Vector2(-60, 20)
 	print("currently selecting: ", current_option.text)

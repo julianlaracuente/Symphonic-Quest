@@ -7,6 +7,7 @@ class_name Hero
 @export var defense :int = 50
 @export var atb_time :float = 8
 @onready var atb_timer : Timer = $ATBTimer
+@export var LIMIT : int
 
 var can_attack = true
 
@@ -36,6 +37,10 @@ func attack():
 		$ATBTimer.start()
 		print(name, ' : attack')
 
+func gain_health(amount):
+	if amount < max_health:
+		health+= amount
+
 func _on_timer_timeout() -> void:
 	can_attack = true
 
@@ -46,3 +51,10 @@ func get_atb_percent():
 	if atb_timer.is_stopped():
 		return 1.0
 	return 1.0 - (atb_timer.time_left / atb_timer.wait_time)
+
+func consume_item(item : Item):
+	if item.health_gain > 0:
+		gain_health(item.health_gain)
+	else:
+		#for now
+		pass

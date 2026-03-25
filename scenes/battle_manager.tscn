@@ -1,22 +1,33 @@
 [gd_scene format=3 uid="uid://ch6iqb0n3ecpg"]
 
 [ext_resource type="PackedScene" uid="uid://bc08nd651b2eg" path="res://scenes/test.tscn" id="1_7wf3v"]
+[ext_resource type="Script" uid="uid://dr545wofb7a1y" path="res://scripts/battle_manager.gd" id="1_lhjl6"]
 [ext_resource type="PackedScene" uid="uid://br4cn8qn4o5gb" path="res://scenes/hero_ui.tscn" id="2_4wxy3"]
 [ext_resource type="Script" uid="uid://bs4iogwg5nekb" path="res://scripts/options.gd" id="3_lhjl6"]
 [ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="4_4wxy3"]
 [ext_resource type="PackedScene" uid="uid://qfakkt6qw5gj" path="res://scenes/player_input.tscn" id="4_h4tux"]
 
-[node name="BattleManager" type="Node3D" unique_id=671835788]
+[node name="BattleManager" type="Node3D" unique_id=671835788 node_paths=PackedStringArray("items")]
+script = ExtResource("1_lhjl6")
+items = [null, null, null]
 
 [node name="Julian" parent="." unique_id=271870303 instance=ExtResource("1_7wf3v")]
 max_health = 50
+damage = 50
+defense = 50
+atb_time = 8.0
 
 [node name="Fabian" parent="." unique_id=2124232109 instance=ExtResource("1_7wf3v")]
 max_health = 50
+damage = 50
+defense = 50
 atb_time = 20.0
 
 [node name="Yadriel" parent="." unique_id=809557965 instance=ExtResource("1_7wf3v")]
 max_health = 50
+damage = 50
+defense = 50
+atb_time = 8.0
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2099249352]
 
@@ -72,10 +83,10 @@ hero = NodePath("../../Yadriel")
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 456.0
-offset_top = 808.0
-offset_right = 496.0
-offset_bottom = 848.0
+offset_left = 496.0
+offset_top = 944.0
+offset_right = 536.0
+offset_bottom = 984.0
 scale = Vector2(1.1167752, 1.2435694)
 script = ExtResource("3_lhjl6")
 
@@ -87,45 +98,29 @@ layout_mode = 0
 offset_left = -80.0
 offset_top = -48.0
 offset_right = 187.0
-offset_bottom = 200.0
+offset_bottom = 57.89789
 
 [node name="ColorRect" type="ColorRect" parent="UI/Options/Rectangles" unique_id=1767170716]
 layout_mode = 0
 offset_left = -71.63483
 offset_top = -38.59857
 offset_right = 179.08707
-offset_bottom = 192.9928
+offset_bottom = 51.46472
 color = Color(0, 0, 0.6039216, 1)
 
 [node name="Attack" type="Label" parent="UI/Options" unique_id=1972522347]
 layout_mode = 0
-offset_top = -8.0
-offset_right = 109.0
-offset_bottom = 41.0
+offset_top = -19.299292
+offset_right = 124.0
+offset_bottom = 29.700708
 theme_override_fonts/font = ExtResource("4_4wxy3")
 theme_override_font_sizes/font_size = 35
 text = "Attack"
 
-[node name="Magic" type="Label" parent="UI/Options" unique_id=1997294250]
-layout_mode = 0
-offset_top = 55.0
-offset_right = 99.0
-offset_bottom = 104.0
-theme_override_fonts/font = ExtResource("4_4wxy3")
-theme_override_font_sizes/font_size = 35
-text = "Magic"
-
-[node name="Item" type="Label" parent="UI/Options" unique_id=1479011961]
-layout_mode = 0
-offset_top = 135.0
-offset_right = 78.0
-offset_bottom = 184.0
-theme_override_fonts/font = ExtResource("4_4wxy3")
-theme_override_font_sizes/font_size = 35
-text = "Item"
-
 [node name="PlayerInput" parent="UI" unique_id=418061548 node_paths=PackedStringArray("party", "options") instance=ExtResource("4_h4tux")]
 party = [NodePath("../HeroUI"), NodePath("../HeroUI2"), NodePath("../HeroUI3")]
-options = [NodePath("../Options/Attack"), NodePath("../Options/Magic"), NodePath("../Options/Item")]
+options = [NodePath("../Options/Attack")]
+
+[node name="Items" type="Node" parent="." unique_id=852625074]
 
 [connection signal="make_visible" from="UI/PlayerInput" to="UI/Options" method="_on_player_input_make_visible"]
