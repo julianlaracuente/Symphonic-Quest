@@ -1,3 +1,6 @@
+Camera3D
+Timer
+CharacterBody3D
 AudioStreamPlayer
 AnimationPlayer
 TextureRect
@@ -9,6 +12,3 @@ ColorRect
 Panel
 Node
 TextureProgressBar
-ProgressBar
-VBoxContainer
-MarginContainer

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cwqgxkopk47cy"]
+
+[ext_resource type="PackedScene" uid="uid://dr7iaaao11n1u" path="res://assets/CARCAXIS – Retro PSX Monster/ CARCAXIS.fbx" id="1_dlmty"]
+[ext_resource type="Script" uid="uid://5yk51j01wwop" path="res://scripts/boss.gd" id="2_neq0i"]
+
+[node name="Boss" unique_id=1436693078 instance=ExtResource("1_dlmty")]
+script = ExtResource("2_neq0i")
+
+[node name="Skeleton3D" parent="Armature_009" parent_id_path=PackedInt32Array(286309163) index="0" unique_id=853159529]
+bones/0/position = Vector3(-0.14433064, 0.1227988, -0.8852657)
+bones/0/rotation = Quaternion(-0.7143958, -0.40539, -0.055928774, 0.5675998)
+bones/1/rotation = Quaternion(0.04360829, 0.12014608, 0.04666968, 0.9906994)
+bones/2/rotation = Quaternion(-0.0042622215, 0.036696166, 0.028193753, 0.9989196)
+bones/3/rotation = Quaternion(-0.0027630543, 0.03640884, 0.028499091, 0.9989268)
+bones/4/rotation = Quaternion(-0.14784569, -0.01970824, 0.04612509, 0.9877377)
+bones/5/rotation = Quaternion(0.091619834, -0.049896058, 0.22295478, 0.9692303)
+bones/8/rotation = Quaternion(0.6216905, 0.39460167, -0.47741362, 0.4794442)
+bones/9/rotation = Quaternion(-0.043297343, -0.14247581, -0.3223104, 0.93484867)
+bones/10/rotation = Quaternion(0.010050997, 0.66033053, 0.09841119, 0.74443126)
+bones/13/rotation = Quaternion(0.49445698, -0.46827075, 0.55355996, 0.4793812)
+bones/14/rotation = Quaternion(-0.13188945, 0.553817, -0.19607675, 0.7984021)
+bones/15/rotation = Quaternion(-0.06804549, 0.19658306, -0.58425385, 0.7844568)
+bones/18/rotation = Quaternion(-0.36758056, -0.050343454, 0.9286281, 3.3024702e-05)
+bones/19/rotation = Quaternion(-0.8488935, -0.024865136, 0.060968164, 0.5244469)
+bones/20/rotation = Quaternion(0.3777072, 0.10908186, 0.056012467, 0.9177697)
+bones/21/rotation = Quaternion(0.23387615, -0.15611376, 0.061337586, 0.95768905)
+bones/24/rotation = Quaternion(-0.24856152, 0.36569592, 0.8723073, 0.208719)
+bones/25/rotation = Quaternion(-0.6069865, -0.05118686, 0.06315706, 0.7905432)
+bones/26/rotation = Quaternion(0.6025934, -0.029575143, -0.0557019, 0.7955525)
+bones/27/rotation = Quaternion(0.22546779, 0.10469507, 0.082921214, 0.965053)
+
+[node name="ATBTimer" type="Timer" parent="." index="2" unique_id=11192772]
+
+[node name="Camera3D" type="Camera3D" parent="." index="3" unique_id=733378573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7725465, 1.2017586)
