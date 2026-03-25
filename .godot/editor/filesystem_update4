@@ -1,0 +1,5 @@
+res://scenes/battle_manager.tscn
+res://scripts/Global.gd
+res://scripts/battle_manager.gd
+res://scripts/player_input.gd
+res://scenes/player_input.tscn

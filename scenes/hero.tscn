@@ -27,7 +27,11 @@ _data = {
 
 [node name="Hero" type="CharacterBody3D" unique_id=271870303]
 script = ExtResource("1_3uyx6")
+max_health = null
 health = 2
+damage = null
+defense = null
+atb_time = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=32472431]
 shape = SubResource("SphereShape3D_3uyx6")
