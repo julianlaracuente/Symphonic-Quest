@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bc08nd651b2eg"]
+
+[ext_resource type="PackedScene" uid="uid://ceg8v31811vbm" path="res://scenes/hero.tscn" id="1_errlg"]
+[ext_resource type="Script" uid="uid://cglqbgixvjhww" path="res://scripts/characters.gd" id="2_bl13t"]
+[ext_resource type="PackedScene" uid="uid://b41m5nbnyswf8" path="res://assets/Animations.glb" id="5_2cgup"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_errlg"]
+
+[node name="Characters" unique_id=271870303 instance=ExtResource("1_errlg")]
+script = ExtResource("2_bl13t")
+health = 50
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=32472431]
+shape = SubResource("BoxShape3D_errlg")
+
+[node name="Animations" parent="." index="2" unique_id=735637980 instance=ExtResource("5_2cgup")]

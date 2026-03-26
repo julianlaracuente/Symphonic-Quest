@@ -1,40 +1,27 @@
 [gd_scene format=3 uid="uid://ch6iqb0n3ecpg"]
 
-[ext_resource type="PackedScene" uid="uid://bc08nd651b2eg" path="res://scenes/test.tscn" id="1_7wf3v"]
+[ext_resource type="PackedScene" uid="uid://bc08nd651b2eg" path="res://scenes/character.tscn" id="1_7wf3v"]
 [ext_resource type="Script" uid="uid://dr545wofb7a1y" path="res://scripts/battle_manager.gd" id="1_lhjl6"]
 [ext_resource type="PackedScene" uid="uid://br4cn8qn4o5gb" path="res://scenes/hero_ui.tscn" id="2_4wxy3"]
 [ext_resource type="Script" uid="uid://bs4iogwg5nekb" path="res://scripts/options.gd" id="3_lhjl6"]
 [ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="4_4wxy3"]
 [ext_resource type="PackedScene" uid="uid://qfakkt6qw5gj" path="res://scenes/player_input.tscn" id="4_h4tux"]
-[ext_resource type="PackedScene" uid="uid://cwqgxkopk47cy" path="res://scenes/boss.tscn" id="7_h4tux"]
-
-[sub_resource type="Environment" id="Environment_h4tux"]
 
 [node name="BattleManager" type="Node" unique_id=1071554932]
 script = ExtResource("1_lhjl6")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1841305746]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
-
 [node name="Julian" parent="." unique_id=271870303 instance=ExtResource("1_7wf3v")]
 max_health = 50
 health = 0
-damage = 50
-defense = 50
-atb_time = 8.0
 
 [node name="Fabian" parent="." unique_id=2124232109 instance=ExtResource("1_7wf3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.135534, 0, 0)
 max_health = 50
-damage = 50
-defense = 50
 atb_time = 20.0
 
 [node name="Yadriel" parent="." unique_id=809557965 instance=ExtResource("1_7wf3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.18216, 0, 0)
 max_health = 50
-damage = 50
-defense = 50
-atb_time = 8.0
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2099249352]
 
@@ -128,32 +115,7 @@ text = "Attack"
 party = [NodePath("../HeroUI"), NodePath("../HeroUI2"), NodePath("../HeroUI3")]
 options = [NodePath("../Options/Attack")]
 
-[node name="Boss" parent="." unique_id=637690906 instance=ExtResource("7_h4tux")]
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=751629627]
-transform = Transform3D(0.9669659, 0, -0.25490573, 0, 1, 0, 0.25490573, 0, 0.9669659, 0, 0.6643882, 1.4162147)
-
-[node name="Wall1" type="CSGBox3D" parent="." unique_id=1395560148]
-transform = Transform3D(-1.5893256e-08, 1, 0, -1, -1.5893256e-08, 0, 0, 0, 1, 273.7234, 97.73007, 0)
-size = Vector3(545.9326, 0.5111084, 666.042)
-
-[node name="Wall2" type="CSGBox3D" parent="." unique_id=721132144]
-transform = Transform3D(2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, 0, 0, 1, -276.7834, -0.4888916, 0)
-size = Vector3(545.9326, 0.5111084, 666.042)
-
-[node name="Floor" type="CSGBox3D" parent="." unique_id=82073025]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2444458, 0)
-size = Vector3(545.9326, 0.5111084, 666.042)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=347339006]
-environment = SubResource("Environment_h4tux")
-
-[node name="Wall3" type="CSGBox3D" parent="." unique_id=116840367]
-transform = Transform3D(6.947163e-16, -4.371139e-08, 1, -1, -1.5893256e-08, 0, 1.5893256e-08, -1, -4.371139e-08, 48.15509, 97.73007, -330.95026)
-size = Vector3(545.9326, 0.5111084, 666.042)
-
-[node name="Wall1" type="CSGBox3D" parent="Wall3" unique_id=580317307]
-transform = Transform3D(-0.99999994, -4.371139e-08, 4.371139e-08, 4.371139e-08, -0.99999994, -4.3711392e-08, 4.37114e-08, -4.3711385e-08, 1, 67.80175, -668.1197, -3.4332275e-05)
-size = Vector3(545.9326, 0.5111084, 666.042)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1447784530]
+transform = Transform3D(0.79709935, 0, 0.60384816, 0, 1, 0, -0.60384816, 0, 0.79709935, 16.672901, 8.205541, 43.541725)
 
 [connection signal="make_visible" from="UI/PlayerInput" to="UI/Options" method="_on_player_input_make_visible"]

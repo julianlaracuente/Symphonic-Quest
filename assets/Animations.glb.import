@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cayqsfjdaut1l"
-path="res://.godot/imported/SwordIdle.glb-82462edef8882ae49be8dba950329a14.scn"
+uid="uid://b41m5nbnyswf8"
+path="res://.godot/imported/Animations.glb-da1b469fb6eebea589c1812b081a96c0.scn"
 
 [deps]
 
-source_file="res://assets/SwordIdle.glb"
-dest_files=["res://.godot/imported/SwordIdle.glb-82462edef8882ae49be8dba950329a14.scn"]
+source_file="res://assets/Animations.glb"
+dest_files=["res://.godot/imported/Animations.glb-da1b469fb6eebea589c1812b081a96c0.scn"]
 
 [params]
 
