@@ -14,7 +14,6 @@ var dict_animations = {
 
 func _ready() -> void:
 	pass
-
 func play_animation(anim_key: String):
 	if not dict_animations.has(anim_key): return
 	
@@ -29,3 +28,7 @@ func _process(delta: float) -> void:
 	elif not is_alive() and not death_animation_displayed:
 		play_animation('death')
 		death_animation_displayed = true
+
+func take_damage(amount : int):
+	health = max(health - amount, 0)	
+	play_animation("hit")

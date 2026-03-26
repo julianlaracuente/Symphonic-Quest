@@ -1,3 +1,4 @@
+Timer
 Camera3D
 Node
 Sprite2D
@@ -12,4 +13,3 @@ ColorRect
 Panel
 TextureProgressBar
 ProgressBar
-VBoxContainer
