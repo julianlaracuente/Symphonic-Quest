@@ -1,0 +1,8 @@
+res://scenes/battle_manager.tscn::66787b11662ebc82b763cb361e7ad1b0::1774561399::res://.godot/exported/133200997/export-b89fb1f5f5c0d98edccbaf3de44483f1-battle_manager.scn
+res://scenes/boss.tscn::5b1c652a8692eacbe5295e19f0f68a35::1774545648::res://.godot/exported/133200997/export-7649a76be24b0454ff92379a9b1bf3ce-boss.scn
+res://scenes/character.tscn::2511e06fde84e770e6d3de1ed3132ddf::1774540417::res://.godot/exported/133200997/export-b6bd7a241034177d7fe082a7597ba8ea-character.scn
+res://scenes/end_screen.tscn::79cc673707f1098f6996ba65676a3ebb::1774361644::res://.godot/exported/133200997/export-06178169d42c94042436e74e8c7a4695-end_screen.scn
+res://scenes/hero.tscn::49dba08b58a0b41a0a6acdc676afd4eb::1774540417::res://.godot/exported/133200997/export-6e6f512f78c3c1887e2bbacd7cff7128-hero.scn
+res://scenes/hero_ui.tscn::d915a14555fa4eb46e358eab9e34e516::1774529074::res://.godot/exported/133200997/export-e0cfb3f5ab31b21ff6c6b725939e5cfa-hero_ui.scn
+res://scenes/player_input.tscn::da973814c5b5975e6b9f82eb5c20ec1b::1774285170::res://.godot/exported/133200997/export-5fd8adf19a3b6e6a8efd444602b6342b-player_input.scn
+res://scenes/start_screen.tscn::43cda51bd070bb12e6b4bfc19131cb77::1774556340::res://.godot/exported/133200997/export-0667f4c7c212ccfd14534425cdebbe06-start_screen.scn

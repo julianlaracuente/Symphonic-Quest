@@ -7,8 +7,80 @@
 [ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="4_4wxy3"]
 [ext_resource type="PackedScene" uid="uid://qfakkt6qw5gj" path="res://scenes/player_input.tscn" id="4_h4tux"]
 [ext_resource type="PackedScene" uid="uid://cwqgxkopk47cy" path="res://scenes/boss.tscn" id="7_h4tux"]
+[ext_resource type="Texture2D" uid="uid://b7w4em8ptcnlt" path="res://assets/BattleScene/696.jpg" id="8_j4k0a"]
 [ext_resource type="AudioStream" uid="uid://ccwfln8vjdtt" path="res://assets/BattleScene/MainBattleStart.wav" id="8_mc2mu"]
 [ext_resource type="AudioStream" uid="uid://dw3ur66wi3tnh" path="res://assets/BattleScene/MainBattleLoop.wav" id="9_aqm64"]
+[ext_resource type="AudioStream" uid="uid://cm166kagq0xfr" path="res://assets/BattleScene/MainBattleEnd.wav" id="11_offjt"]
+
+[sub_resource type="Animation" id="Animation_g1efq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(23.475082, 67.22653, 31.493755)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.0724243, 0.2323978, 1.1919315)]
+}
+
+[sub_resource type="Animation" id="Animation_o2uxe"]
+resource_name = "intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(23.475082, 67.22653, 31.493755), Vector3(23.475, 40.22, 31.494), Vector3(23.475, 13.22, 31.494)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.0724243, 0.2323978, 1.1919315), Vector3(-0.6161012, 0.6161012, 0.60039324), Vector3(-0.23212878, 1.0716321, 0.008726646)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ghipu"]
+_data = {
+&"RESET": SubResource("Animation_g1efq"),
+&"intro": SubResource("Animation_o2uxe")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4k0a"]
+albedo_texture = ExtResource("8_j4k0a")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uto84"]
+albedo_texture = ExtResource("8_j4k0a")
+uv1_triplanar = true
+uv2_scale = Vector3(1000, 1000, 1000)
 
 [sub_resource type="Environment" id="Environment_h4tux"]
 
@@ -123,6 +195,15 @@ text = "Attack"
 party = [NodePath("../HeroUI"), NodePath("../HeroUI2"), NodePath("../HeroUI3")]
 options = [NodePath("../Options/Attack")]
 
+[node name="CamRig" type="Node3D" parent="." unique_id=867476066]
+
+[node name="Camera3D2" type="Camera3D" parent="CamRig" unique_id=1971771200]
+transform = Transform3D(0.17197193, -0.9789311, 0.11008805, 0.44409916, 0.17679457, 0.878362, -0.8793188, -0.10216357, 0.46514627, 23.475082, 67.22653, 31.493755)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CamRig" unique_id=2058098879]
+libraries/ = SubResource("AnimationLibrary_ghipu")
+autoplay = &"intro"
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1447784530]
 transform = Transform3D(0.47614947, -0.20695557, 0.8546643, 0.008949042, 0.9730016, 0.23062505, -0.87931883, -0.10216357, 0.46514624, 23.475082, 13.223601, 31.493755)
 
@@ -131,11 +212,13 @@ transform = Transform3D(-7.8227334, 0, 1.6747652, 0, 8, 0, -1.6747652, 0, -7.822
 
 [node name="Wall1" type="CSGBox3D" parent="." unique_id=1992135887]
 transform = Transform3D(2.5809568e-08, 0.8660254, -0.5, -1, 2.9802322e-08, 0, 1.4901161e-08, 0.5, 0.8660254, -37.50983, -0.47790527, -14.720894)
-size = Vector3(235.51367, 0.5220947, 398.07056)
+size = Vector3(235.51367, 0.5220947, 2549.0225)
+material = SubResource("StandardMaterial3D_j4k0a")
 
 [node name="Floor" type="CSGBox3D" parent="." unique_id=2131955000]
 transform = Transform3D(1, 0, 0, 0, 0.99982953, -0.01846453, 0, 0.01846453, 0.99982953, 0, -0.23895264, 0)
 size = Vector3(235.51367, 0.5220947, 808.06055)
+material = SubResource("StandardMaterial3D_uto84")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1694290999]
 environment = SubResource("Environment_h4tux")
@@ -145,6 +228,9 @@ stream = ExtResource("8_mc2mu")
 
 [node name="ThemeLoop" type="AudioStreamPlayer" parent="." unique_id=186787818]
 stream = ExtResource("9_aqm64")
+
+[node name="ThemeOutro" type="AudioStreamPlayer" parent="." unique_id=790538680]
+stream = ExtResource("11_offjt")
 
 [node name="EndScreenTransition" type="Timer" parent="." unique_id=884243324]
 wait_time = 4.0

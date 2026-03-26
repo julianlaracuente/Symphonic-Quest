@@ -1,6 +1,3 @@
 res://scripts/boss.gd
-res://scenes/boss.tscn
 res://scripts/battle_manager.gd
-res://scripts/hero.gd
-res://scripts/characters.gd
 res://scenes/battle_manager.tscn
