@@ -9,11 +9,19 @@ class_name Hero
 @onready var atb_timer : Timer = $ATBTimer
 @export var LIMIT : int
 
-var can_attack = true
+
 
 func _ready() -> void:
 	atb_timer.wait_time = atb_time
 	atb_timer.stop()
+	
+func can_attack():
+	if get_parent():
+		return get_parent().flag
+
+func change_flag(boolean):
+	if get_parent():
+		get_parent().flag = boolean
 
 func take_damage(amount : int):
 	health -= max(amount-defense, 0)
@@ -31,9 +39,10 @@ func play_animation(animation : String):
 		await $AnimationPlayer.animation_finished
 
 func attack():
-	if can_attack:
+	if can_attack():
 		play_animation("attack")
-		can_attack = false
+		change_flag(false)
+		#can_attack = false
 		$ATBTimer.start()
 		print(name, ' : attack')
 
@@ -42,7 +51,8 @@ func gain_health(amount):
 		health+= amount
 
 func _on_timer_timeout() -> void:
-	can_attack = true
+	#can_attack = true
+	change_flag(true)
 
 func _process(delta: float) -> void:
 	pass
@@ -51,10 +61,3 @@ func get_atb_percent():
 	if atb_timer.is_stopped():
 		return 1.0
 	return 1.0 - (atb_timer.time_left / atb_timer.wait_time)
-
-func consume_item(item : Item):
-	if item.health_gain > 0:
-		gain_health(item.health_gain)
-	else:
-		#for now
-		pass

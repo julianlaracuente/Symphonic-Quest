@@ -31,10 +31,11 @@ func input_manager():
 			current_ui_index = (current_ui_index - 1 + party.size()) % party.size()
 			update_selection()
 		if Input.is_action_just_pressed("enter"):
-			in_options = true
-			in_selection = false
-			make_visible.emit()
-			update_options()
+			if current_hero_ui.hero.is_alive():
+				in_options = true
+				in_selection = false
+				make_visible.emit()
+				update_options()
 	elif in_options:
 		if Input.is_action_just_pressed("enter"):
 			in_options = false

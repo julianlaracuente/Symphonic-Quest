@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ce1daybnkmh2m" path="res://scripts/hero_ui.gd" id="1_ruxx6"]
 [ext_resource type="Texture2D" uid="uid://dqaw2wt42da3w" path="res://assets/ProgressWhite.png" id="2_iitki"]
 [ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="2_wsyrq"]
+[ext_resource type="Texture2D" uid="uid://rdolpna0fwnj" path="res://assets/Skull&Bones - FrodoUndead.png" id="4_iitki"]
 
 [node name="HeroUI" type="Control" unique_id=661964241]
 layout_mode = 3
@@ -67,3 +68,10 @@ offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("2_wsyrq")
 theme_override_font_sizes/font_size = 35
 text = "Name"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1102529722]
+visible = false
+position = Vector2(250, 0)
+texture = ExtResource("4_iitki")
+hframes = 4
+vframes = 6

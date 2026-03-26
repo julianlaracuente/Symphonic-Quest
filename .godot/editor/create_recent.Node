@@ -1,15 +1,14 @@
+Sprite2D
+Node
 Node3D
 AudioStreamPlayer
 AnimationPlayer
 TextureRect
 Label
 Node2D
-Sprite2D
 Control
 ColorRect
 Panel
-Node
 TextureProgressBar
 ProgressBar
 VBoxContainer
-MarginContainer

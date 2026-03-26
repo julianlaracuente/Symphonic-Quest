@@ -7,12 +7,12 @@
 [ext_resource type="FontFile" uid="uid://b8fo1w0xhaxon" path="res://assets/NormalFont.ttf" id="4_4wxy3"]
 [ext_resource type="PackedScene" uid="uid://qfakkt6qw5gj" path="res://scenes/player_input.tscn" id="4_h4tux"]
 
-[node name="BattleManager" type="Node3D" unique_id=671835788 node_paths=PackedStringArray("items")]
+[node name="BattleManager" type="Node" unique_id=1071554932]
 script = ExtResource("1_lhjl6")
-items = [null, null, null]
 
 [node name="Julian" parent="." unique_id=271870303 instance=ExtResource("1_7wf3v")]
 max_health = 50
+health = 0
 damage = 50
 defense = 50
 atb_time = 8.0
@@ -120,7 +120,5 @@ text = "Attack"
 [node name="PlayerInput" parent="UI" unique_id=418061548 node_paths=PackedStringArray("party", "options") instance=ExtResource("4_h4tux")]
 party = [NodePath("../HeroUI"), NodePath("../HeroUI2"), NodePath("../HeroUI3")]
 options = [NodePath("../Options/Attack")]
-
-[node name="Items" type="Node" parent="." unique_id=852625074]
 
 [connection signal="make_visible" from="UI/PlayerInput" to="UI/Options" method="_on_player_input_make_visible"]

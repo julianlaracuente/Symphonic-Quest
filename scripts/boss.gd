@@ -70,6 +70,7 @@ func get_atb_percent():
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
+	#debug
 		attack()
 	if Input.is_action_just_pressed("ui_cancel"):
 		take_damage(499)
