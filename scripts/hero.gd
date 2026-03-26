@@ -32,12 +32,12 @@ func is_alive():
 
 func perfom_attack(target : CharacterBody3D):
 	target.take_damage(damage)
-	
-func play_animation(animation : String):
-	if $AnimationPlayer.has_animation(animation):
-		$AnimationPlayer.play(animation)
-		await $AnimationPlayer.animation_finished
 
+# invalid
+func play_animation(animation : String):
+	pass
+
+#invalid
 func attack():
 	if can_attack():
 		play_animation("attack")
@@ -46,9 +46,6 @@ func attack():
 		$ATBTimer.start()
 		print(name, ' : attack')
 
-func gain_health(amount):
-	if amount < max_health:
-		health+= amount
 
 func _on_timer_timeout() -> void:
 	#can_attack = true
