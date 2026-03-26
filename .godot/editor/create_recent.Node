@@ -1,3 +1,5 @@
+WorldEnvironment
+CSGBox3D
 Camera3D
 Node
 Sprite2D
@@ -10,6 +12,3 @@ Node2D
 Control
 ColorRect
 Panel
-TextureProgressBar
-ProgressBar
-VBoxContainer

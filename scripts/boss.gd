@@ -60,16 +60,19 @@ func play_animation(animation : String):
 	if model.has_animation(animation):
 		model.play(animation)
 		await model.animation_finished
-		
+		if attacks[0] in animation or attacks[1] in animation:
+			print("Yes")
+			atb_timer.start()
 
+func add_to_queue():
+	if not get_parent().attack_queue.has(3) and atb_complete:
+		get_parent().attack_queue.append(3)
 func attack():
-	if can_attack() and atb_complete:
-		change_flag(false)
-		var ability_int = randi_range(0,1)
-		play_animation(attacks[ability_int])
-		atb_complete = false
-		atb_timer.start()
-		print(name, ' : attack')
+	var ability_int = randi_range(0,1)
+	play_animation(attacks[ability_int])
+	atb_complete = false
+	#atb_timer.start()
+	print(name, ' : attack')
 
 
 
@@ -82,7 +85,7 @@ func get_atb_percent():
 	return 1.0 - (atb_timer.time_left / atb_timer.wait_time)
 
 func _physics_process(delta: float) -> void:
-	attack()
+	add_to_queue()
 
 
 func _on_atb_timer_timeout() -> void:
@@ -94,4 +97,3 @@ func _on_atb_timer_timeout() -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	change_flag(true)
 	play_animation(idle)
-	print("Action free")
