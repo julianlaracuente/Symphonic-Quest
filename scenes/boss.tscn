@@ -6,7 +6,7 @@
 [node name="Boss" unique_id=637690906 instance=ExtResource("1_dlmty")]
 script = ExtResource("2_neq0i")
 
-[node name="Skeleton3D" parent="Armature_009" parent_id_path=PackedInt32Array(1260462370) index="0" unique_id=1679077039]
+[node name="Skeleton3D" parent="Armature_009" parent_id_path=PackedInt32Array(732564258) index="0" unique_id=2026676920]
 bones/0/position = Vector3(0.012686532, 0.8081535, -0.031757478)
 bones/0/rotation = Quaternion(0.10064612, -0.16407993, -0.015965585, 0.9811694)
 bones/1/position = Vector3(8.6736174e-19, 0.0750162, 0.006405512)
@@ -82,7 +82,7 @@ bones/28/position = Vector3(-7.2245063e-09, 0.041199088, -1.5514519e-07)
 bones/28/rotation = Quaternion(4.568141e-08, -4.2162094e-07, -2.3115248e-07, 1)
 bones/28/scale = Vector3(1, 1.0000001, 1.0000001)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=2136323192]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1548496963]
 autoplay = &"Armature_009|Armature_010|mixamo_com|Layer0"
 
 [node name="ATBTimer" type="Timer" parent="." index="2" unique_id=11192772]

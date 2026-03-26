@@ -9,7 +9,7 @@ class_name Hero
 @onready var atb_timer : Timer = $ATBTimer
 @export var LIMIT : int
 
-var atb_complete = true
+
 
 func _ready() -> void:
 	atb_timer.wait_time = atb_time
@@ -32,35 +32,27 @@ func is_alive():
 
 func perfom_attack(target : CharacterBody3D):
 	target.take_damage(damage)
-
-# invalid
-func play_animation(animation : String):
-	pass
-
-func add_to_queue():
-	var num
-	if self.name == "Julian":
-		num = 0
-	if self.name == "Fabian":
-		num = 1
-	if self.name == "Yadriel":
-		num = 2
-	if not get_parent().attack_queue.has(num) and atb_complete:
-		get_parent().attack_queue.append(num)
-		atb_complete = false
 	
-#invalid
-func attack():
-	play_animation("attack")
-	#can_attack = false
-	$ATBTimer.start()
-	print(name, ' : attack')
+func play_animation(animation : String):
+	if $AnimationPlayer.has_animation(animation):
+		$AnimationPlayer.play(animation)
+		await $AnimationPlayer.animation_finished
 
+func attack():
+	if can_attack():
+		play_animation("attack")
+		change_flag(false)
+		#can_attack = false
+		$ATBTimer.start()
+		print(name, ' : attack')
+
+func gain_health(amount):
+	if amount < max_health:
+		health+= amount
 
 func _on_timer_timeout() -> void:
 	#can_attack = true
 	change_flag(true)
-	atb_complete = true
 
 func _process(delta: float) -> void:
 	pass

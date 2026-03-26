@@ -1,4 +1,5 @@
-res://scenes/battle_manager.tscn
 res://scripts/battle_manager.gd
 res://scripts/boss.gd
 res://scripts/hero.gd
+res://scenes/boss.tscn
+res://scenes/battle_manager.tscn
