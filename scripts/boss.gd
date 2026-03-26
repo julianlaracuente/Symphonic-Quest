@@ -1,7 +1,7 @@
 extends Node3D
 class_name Boss
 
-@export var max_health : int = 1000
+@export var max_health : int = 150
 @export var health : int = self.max_health
 @export var damage : int = 50
 @export var defense :int = 50
@@ -43,14 +43,13 @@ func can_change_flag():
 	return true
 
 func take_damage(amount : int):
-	if can_take_damage:
-		can_take_damage = false
-		health -= max(amount-defense, 0)
-		health = max(health, 0)
-		if health > 0:
-			play_animation(hurt)
-		else:
-			death()
+	#if can_take_damage:
+	can_take_damage = false
+	health = max(health - amount, 0)	
+	if health > 0:
+		play_animation(hurt)
+	else:
+		death()
 
 func death():
 	play_animation(dying)
@@ -65,7 +64,6 @@ func perfom_attack(target : CharacterBody3D):
 func play_animation(animation : String):
 	if model.has_animation(animation):
 		model.play(animation)
-		await model.animation_finished
 		
 
 func attack():
@@ -80,8 +78,11 @@ func attack():
 
 
 func _process(delta: float) -> void:
-	attack()
+	if is_alive():
+		attack()
 
+	
+	
 func get_atb_percent():
 	if atb_timer.is_stopped():
 		return 1.0
@@ -97,5 +98,6 @@ func _on_atb_timer_timeout() -> void:
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	change_flag(true)
-	play_animation(idle)
-	print(name + " : Action free")
+	if is_alive():
+		play_animation(idle)
+		print(name + " : Action free")

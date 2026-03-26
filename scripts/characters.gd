@@ -21,6 +21,9 @@ func play_animation(anim_key: String):
 	
 	if anim_player.has_animation(internal_name):
 		anim_player.play(internal_name)
+		await anim_player.animation_finished
+
+
 
 func _process(delta: float) -> void:
 	if not anim_player.is_playing() and is_alive():

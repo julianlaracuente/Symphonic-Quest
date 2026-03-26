@@ -22,12 +22,10 @@ shadow_enabled = true
 
 [node name="Julian" parent="." unique_id=271870303 instance=ExtResource("1_7wf3v")]
 max_health = 50
-health = 0
 
 [node name="Fabian" parent="." unique_id=2124232109 instance=ExtResource("1_7wf3v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.135534, 0, 0)
 max_health = 50
-atb_time = 20.0
 
 [node name="Yadriel" parent="." unique_id=809557965 instance=ExtResource("1_7wf3v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.18216, 0, 0)

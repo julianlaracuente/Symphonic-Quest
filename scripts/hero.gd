@@ -8,6 +8,7 @@ class_name Hero
 @export var atb_time :float = 8
 @onready var atb_timer : Timer = $ATBTimer
 @export var LIMIT : int
+@onready var boss : Boss = get_parent().get_node("Boss")
 
 var can_attack2 = true
 
@@ -47,6 +48,7 @@ func attack():
 		#can_attack = false
 		$ATBTimer.start()
 		print(name, ' : attack')
+		boss.take_damage(15)
 
 func gain_health(amount):
 	if amount < max_health:

@@ -25,10 +25,14 @@ func all_heroes_dead():
 func _ready() -> void:
 	pass # Replace with function body.
 
+func check_boss():
+	if not $Boss.is_alive():
+		game_over = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	all_heroes_dead()
+	check_boss()
 	
 	if game_over and not changing_scene:
 		changing_scene = true 
@@ -38,4 +42,3 @@ func _process(delta: float) -> void:
 		
 		await $EndScreenTransition.timeout
 		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
-	print(flag)
