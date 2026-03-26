@@ -3,7 +3,7 @@ class_name Boss
 
 @export var max_health : int = 150
 @export var health : int = self.max_health
-@export var damage : int = 50
+@export var damage : int = 25
 @export var defense :int = 50
 @export var atb_time :float = 8
 @onready var atb_timer : Timer = $ATBTimer
@@ -17,6 +17,10 @@ var bite = "Armature_009|Armature|mixamo_com|Layer0"
 var hurt = "Armature_009|Armature_002|mixamo_com|Layer0"
 var dying = "Armature_009|Armature_005|mixamo_com|Layer0"
 var attacks: Array[String] = [slash, bite]
+var heroes: Array[CharacterBody3D] = []
+@onready var julian: CharacterBody3D = $"../Julian"
+@onready var fabian: CharacterBody3D = $"../Fabian"
+@onready var yadriel: CharacterBody3D = $"../Yadriel"
 
 
 var atb_complete = true
@@ -27,6 +31,9 @@ func _ready() -> void:
 	atb_timer.wait_time = atb_time
 	atb_timer.stop()
 	play_animation(idle)
+	heroes.append(julian)
+	heroes.append(fabian)
+	heroes.append(yadriel)
 
 func can_attack():
 	if get_parent():
@@ -45,7 +52,7 @@ func can_change_flag():
 func take_damage(amount : int):
 	#if can_take_damage:
 	can_take_damage = false
-	health = max(health - amount, 0)	
+	health = max(health - amount, 0)
 	if health > 0:
 		play_animation(hurt)
 	else:
@@ -73,6 +80,10 @@ func attack():
 		play_animation(attacks[ability_int])
 		atb_complete = false
 		atb_timer.start()
+		var hero = heroes[randi_range(0,2)]
+		while not hero.is_alive():
+			hero = heroes[randi_range(0,2)]
+		perfom_attack(hero)
 		print(name, ' : attack')
 
 

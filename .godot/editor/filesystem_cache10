@@ -1,53 +1,55 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774554359
-icon.svg::CompressedTexture2D::5107917845470707233::1773972008::1774550893::1::::<><><>0<>0<>f1d1da17eb7665326b9ea7c31b48c88d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://assets/::1774550826
-Animations.glb::PackedScene::4476353833503760787::1774540281::1774540281::1::::<><><>0<>0<>8bc778c2554065977b58ed65d9a1821d<>res://.godot/imported/Animations.glb-da1b469fb6eebea589c1812b081a96c0.scn::
-Arrow.png::CompressedTexture2D::229324668421191581::1614268010::1774254381::1::::<><><>0<>0<>e19b3806036634b07ecb76ff3debd79c<>res://.godot/imported/Arrow.png-ecbf03ed1ef06a0646e91f5f515bdd3d.ctex::
-NormalFont.ttf::FontFile::4713872076246936149::1614291792::1774254394::1::::<><><>0<>0<>5f09d9f84a62a65c91f390c71e5e9edb<>res://.godot/imported/NormalFont.ttf-27f07b6eb90d5d94b3f1b676da8d4ffd.fontdata::
-Pixelart arrow icon pack 1.0.png::CompressedTexture2D::2212161761236251544::1774223260::1774246068::1::::<><><>0<>0<>f0c705cca7b2ffb09ccd06c019cac5b7<>res://.godot/imported/Pixelart arrow icon pack 1.0.png-51da18be7b0454dce00fd1c56911ec7b.ctex::
-ProgressWhite.png::CompressedTexture2D::8283668725782930038::1742700612::1774254357::1::::<><><>0<>0<>303f24f2b8dadb6421b14934cd7d5c31<>res://.godot/imported/ProgressWhite.png-d9018fb5f0de5ad0e2c4aac3ca5e7c15.ctex::
-Skull&Bones - FrodoUndead.png::CompressedTexture2D::1200273964706754579::1774493927::1774494006::1::::<><><>0<>0<>6a3e86813ae8dcd05399deaf54e101c6<>res://.godot/imported/Skull&Bones - FrodoUndead.png-b0a1ed19eb9b3ac25d4b5ebc5002aba2.ctex::
-::res://assets/BattleScene/::1774550826
-MainBattleEnd.wav::AudioStreamWAV::5670719424563461791::1774550826::1774550826::1::::<><><>0<>0<>99fd9b779351b83d00187a9755fb2c7e<>res://.godot/imported/MainBattleEnd.wav-e55aa0757fa42cb0e2709f5aa7f236c4.sample::
-MainBattleLoop.wav::AudioStreamWAV::8762465563705586157::1774550826::1774550826::1::::<><><>0<>0<>0af3eefe5468c0dafbe6a708d39d3a67<>res://.godot/imported/MainBattleLoop.wav-e75a73687a21483a3ec19460cd983913.sample::
-MainBattleStart.wav::AudioStreamWAV::145851744961669917::1774550826::1774550826::1::::<><><>0<>0<>5db540e5a0cd6d17a54818437eff799e<>res://.godot/imported/MainBattleStart.wav-8e6e3975cbff6616fba9fe817e3ea254.sample::
-::res://assets/CARCAXIS – Retro PSX Monster/::1774550826
- CARCAXIS.fbx::PackedScene::8419018217669776748::1774477937::1774550826::1::::<><><>0<>0<>14163c81248010dea26ec6833efae8d6<>res://.godot/imported/ CARCAXIS.fbx-3b4f94496b5e6352c29c497244d98f5a.scn::
-::res://assets/CARCAXIS – Retro PSX Monster/texture/::1774477937
-body mutant mosnter.png::CompressedTexture2D::6596162257234233278::1774477937::1774477937::1::::<><><>0<>0<>d64276866d2cbd3f9d73a691ff97691c<>res://.godot/imported/body mutant mosnter.png-c67d5b17fdc509a12cd4a59ecf5cf0a2.s3tc.ctex::
-brazos mutant mosnter.png::CompressedTexture2D::296654551586717615::1774477937::1774477937::1::::<><><>0<>0<>6b4229875f7b07b22eac32859bc15295<>res://.godot/imported/brazos mutant mosnter.png-ec3f3bd5e4aefaaa042fed5d70ce7d3d.s3tc.ctex::
-face mutant radition.png::CompressedTexture2D::243832883091369040::1774477937::1774477937::1::::<><><>0<>0<>22ec47b5364babc3cda038e3529d0ff4<>res://.godot/imported/face mutant radition.png-eb51e67d53bbf73ec203b3c6c776e480.s3tc.ctex::
-pantalones mutant.png::CompressedTexture2D::8341217990326130669::1774477937::1774477937::1::::<><><>0<>0<>257fd7e274c69ea7c5f7f251b5bab497<>res://.godot/imported/pantalones mutant.png-4fdfb39f0b43dfb6f29e80269d2df50c.s3tc.ctex::
-pierna mutant monster.png::CompressedTexture2D::1915140245935122795::1774477937::1774477937::1::::<><><>0<>0<>ccd0af0839b6a54d079028e27d5b16c6<>res://.godot/imported/pierna mutant monster.png-096a1bba38e45cc962eb740172ae8af6.s3tc.ctex::
-::res://assets/EndScreen/::1774410928
-LoseThemeLoop.wav::AudioStreamWAV::7147581184878018671::1774410927::1774410927::1::::<><><>0<>0<>d0a4a2b628dd6d40c6d463fbe7f0e476<>res://.godot/imported/LoseThemeLoop.wav-f62bfbf7a20a73a5d578b39ad3ed9171.sample::
-LoseThemeStart.wav::AudioStreamWAV::9088137478636762246::1774410927::1774410927::1::::<><><>0<>0<>029c2ce3d642a931a9fb839154308683<>res://.godot/imported/LoseThemeStart.wav-78a3b5b4696e149e963216552022e6f3.sample::
-Track_#4.wav::AudioStreamWAV::725532202537814291::1774410928::1774410928::1::::<><><>0<>0<>5c750512c6c06129276a5c2b7356fd59<>res://.godot/imported/Track_#4.wav-44ec7b5d64f625ef8b96c7f2d85b6d1f.sample::
-::res://assets/GameHud/::1774354850
-::res://assets/StartScreen/::1774354850
-background.jpg::CompressedTexture2D::3448444583403270687::1774354850::1774354850::1::::<><><>0<>0<>5a387b619d06a38d9a91212baf5b5d51<>res://.godot/imported/background.jpg-eef738cf54786fd5883533dfda7ee127.ctex::
-MainMenuMusic.wav::AudioStreamWAV::6603677651451778182::1774354850::1774354850::1::::<><><>0<>0<>b2a5025270655e8a971b01d3fbffa0f4<>res://.godot/imported/MainMenuMusic.wav-823988acfeddf6fa6581135965c6a1df.sample::
-Select.wav::AudioStreamWAV::8727861463119711352::1774354850::1774354850::1::::<><><>0<>0<>f319a8dd2116627a7969c36b35350c5a<>res://.godot/imported/Select.wav-e31e642715c7c951987b1d09c3e7e4fe.sample::
-::res://scenes/::1774553895
-battle_manager.tscn::PackedScene::5328673383644590412::1774553895::0::1::::<><><>0<>0<><>::uid://bc08nd651b2eg::::res://scenes/character.tscn<>uid://dr545wofb7a1y::::res://scripts/battle_manager.gd<>uid://br4cn8qn4o5gb::::res://scenes/hero_ui.tscn<>uid://bs4iogwg5nekb::::res://scripts/options.gd<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://qfakkt6qw5gj::::res://scenes/player_input.tscn<>uid://cwqgxkopk47cy::::res://scenes/boss.tscn<>uid://ccwfln8vjdtt::::res://assets/BattleScene/MainBattleStart.wav<>uid://dw3ur66wi3tnh::::res://assets/BattleScene/MainBattleLoop.wav
-boss.tscn::PackedScene::6350431894261117252::1774553103::0::1::::<><><>0<>0<><>::uid://dr7iaaao11n1u::::res://assets/CARCAXIS – Retro PSX Monster/ CARCAXIS.fbx<>uid://5yk51j01wwop::::res://scripts/boss.gd
-character.tscn::PackedScene::2580434897759582626::1774540281::0::1::::<><><>0<>0<><>::uid://ceg8v31811vbm::::res://scenes/hero.tscn<>uid://cglqbgixvjhww::::res://scripts/characters.gd<>uid://b41m5nbnyswf8::::res://assets/Animations.glb
-end_screen.tscn::PackedScene::960906986500331402::1774410928::0::1::::<><><>0<>0<><>::uid://bnjp48cy8dmuh::::res://scripts/end_screen.gd<>uid://bpepm4rf4ims2::::res://assets/StartScreen/background.jpg<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://d2qmkcy3omc3g::::res://assets/EndScreen/LoseThemeStart.wav<>uid://djc7daqyy4v6::::res://assets/Arrow.png<>uid://dwl3urh4d7bv1::::res://assets/StartScreen/Select.wav<>uid://c83lvahughgwt::::res://assets/EndScreen/LoseThemeLoop.wav<>uid://klpn6ibrdj6j::::res://assets/EndScreen/Track_#4.wav
-hero.tscn::PackedScene::5068025683249865234::1774540281::0::1::::<><><>0<>0<><>::uid://8b88ky2jhrgv::::res://scripts/hero.gd<>uid://b0r07s43ypcuo::::res://scripts/atb_timer.gd
-hero_ui.tscn::PackedScene::3639644388331106469::1774494718::0::1::::<><><>0<>0<><>::uid://ce1daybnkmh2m::::res://scripts/hero_ui.gd<>uid://dqaw2wt42da3w::::res://assets/ProgressWhite.png<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://rdolpna0fwnj::::res://assets/Skull&Bones - FrodoUndead.png
-player_input.tscn::PackedScene::1133361800933430429::1774477511::0::1::::<><><>0<>0<><>::uid://binwys1ah8gmj::::res://scripts/player_input.gd<>uid://djc7daqyy4v6::::res://assets/Arrow.png
-start_screen.tscn::PackedScene::4496360250638808605::1774354850::0::1::::<><><>0<>0<><>::uid://bpepm4rf4ims2::::res://assets/StartScreen/background.jpg<>uid://doe2e87jiltyn::::res://scripts/start_screen.gd<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://djc7daqyy4v6::::res://assets/Arrow.png<>uid://c1c4uuwswi7t7::::res://assets/StartScreen/MainMenuMusic.wav<>uid://dwl3urh4d7bv1::::res://assets/StartScreen/Select.wav
-::res://scripts/::1774554269
-atb_timer.gd::GDScript::4177812258211532278::1774220592::0::1::::<>Timer<><>0<>0<><>::
-battle_manager.gd::GDScript::8416219269525758396::1774554205::0::1::::<>Node<><>0<>0<><>::
-boss.gd::GDScript::2155872499665082099::1774554205::0::1::::Boss<>Node3D<><>0<>0<><>::
-characters.gd::GDScript::5217656170759198870::1774549642::0::1::::<>Hero<><>0<>0<><>::
-end_screen.gd::GDScript::3318419331183644295::1774410928::0::1::::<>Control<><>0<>0<><>::
-Global.gd::GDScript::1337659831951998252::1774477944::0::1::::<>Node<><>0<>0<><>::
-hero.gd::GDScript::2320359373317169229::1774554269::0::1::::Hero<>CharacterBody3D<><>0<>0<><>::
-hero_ui.gd::GDScript::5107453977231897630::1774548563::0::1::::<>Control<><>0<>0<><>::
-options.gd::GDScript::3710197910541234285::1774236479::0::1::::<>Control<><>0<>0<><>::
-player_input.gd::GDScript::2976147962090593073::1774551281::0::1::::<>Node<><>0<>0<><>::
-Skull&Bones - FrodoUndead.png::CompressedTexture2D::7444123435667475435::1774493992::1774493992::1::::<><><>0<>0<>d7d694016ee124538f99e3250278b586<>res://.godot/imported/Skull&Bones - FrodoUndead.png-0dab6d2e9e361da997cd05f384eb69e4.ctex::
-start_screen.gd::GDScript::8151811658132670465::1774354850::0::1::::<>Control<><>0<>0<><>::
+::res://::1774559764
+icon.svg::CompressedTexture2D::5107917845470707233::1774196471::1774559764::1::::<><><>0<>0<>f1d1da17eb7665326b9ea7c31b48c88d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1774546214
+Animations.glb::PackedScene::4476353833503760787::1774540417::1774545498::1::::<><><>0<>0<>8bc778c2554065977b58ed65d9a1821d<>res://.godot/imported/Animations.glb-da1b469fb6eebea589c1812b081a96c0.scn::
+Arrow.png::CompressedTexture2D::229324668421191581::1774285170::1774285367::1::::<><><>0<>0<>e19b3806036634b07ecb76ff3debd79c<>res://.godot/imported/Arrow.png-ecbf03ed1ef06a0646e91f5f515bdd3d.ctex::
+NormalFont.ttf::FontFile::4713872076246936149::1774285170::1774285366::1::::<><><>0<>0<>5f09d9f84a62a65c91f390c71e5e9edb<>res://.godot/imported/NormalFont.ttf-27f07b6eb90d5d94b3f1b676da8d4ffd.fontdata::
+Pixelart arrow icon pack 1.0.png::CompressedTexture2D::2212161761236251544::1774285170::1774285367::1::::<><><>0<>0<>f0c705cca7b2ffb09ccd06c019cac5b7<>res://.godot/imported/Pixelart arrow icon pack 1.0.png-51da18be7b0454dce00fd1c56911ec7b.ctex::
+ProgressWhite.png::CompressedTexture2D::8283668725782930038::1774285170::1774285367::1::::<><><>0<>0<>303f24f2b8dadb6421b14934cd7d5c31<>res://.godot/imported/ProgressWhite.png-d9018fb5f0de5ad0e2c4aac3ca5e7c15.ctex::
+Skull&Bones - FrodoUndead.png::CompressedTexture2D::1200273964706754579::1774529074::1774539843::1::::<><><>0<>0<>6a3e86813ae8dcd05399deaf54e101c6<>res://.godot/imported/Skull&Bones - FrodoUndead.png-b0a1ed19eb9b3ac25d4b5ebc5002aba2.ctex::
+::res://assets/BattleScene/::1774561184
+696.jpg::CompressedTexture2D::4679648608631062685::1774560914::1774560977::1::::<><><>0<>0<>9184beb2e70169a367ddcf7d98206c66<>res://.godot/imported/696.jpg-02208f36ed5a5ef3dcb833e05bb67d5b.s3tc.ctex::
+amazing-beautiful-sky-with-clouds.jpg::CompressedTexture2D::751109269693434714::1774561184::1774561192::1::::<><><>0<>0<>e17ed6fcda9e7b74441c4baed73c02b9<>res://.godot/imported/amazing-beautiful-sky-with-clouds.jpg-8986993cb8152d354a89f8bc85a91773.ctex::
+MainBattleEnd.wav::AudioStreamWAV::5670719424563461791::1774546232::1774546232::1::::<><><>0<>0<>99fd9b779351b83d00187a9755fb2c7e<>res://.godot/imported/MainBattleEnd.wav-e55aa0757fa42cb0e2709f5aa7f236c4.sample::
+MainBattleLoop.wav::AudioStreamWAV::8762465563705586157::1774546225::1774546358::1::::<><><>0<>0<>0af3eefe5468c0dafbe6a708d39d3a67<>res://.godot/imported/MainBattleLoop.wav-e75a73687a21483a3ec19460cd983913.sample::
+MainBattleStart.wav::AudioStreamWAV::145851744961669917::1774546945::1774546945::1::::<><><>0<>0<>5db540e5a0cd6d17a54818437eff799e<>res://.godot/imported/MainBattleStart.wav-8e6e3975cbff6616fba9fe817e3ea254.sample::
+::res://assets/CARCAXIS – Retro PSX Monster/::1774545420
+ CARCAXIS.fbx::PackedScene::8419018217669776748::1774476340::1774545420::1::::<><><>0<>0<>00f447e272d5e854cea7f3390560f426<>res://.godot/imported/ CARCAXIS.fbx-3b4f94496b5e6352c29c497244d98f5a.scn::
+::res://assets/CARCAXIS – Retro PSX Monster/texture/::1774539844
+body mutant mosnter.png::CompressedTexture2D::6596162257234233278::1774476340::1774539844::1::::<><><>0<>0<>d64276866d2cbd3f9d73a691ff97691c<>res://.godot/imported/body mutant mosnter.png-c67d5b17fdc509a12cd4a59ecf5cf0a2.s3tc.ctex::
+brazos mutant mosnter.png::CompressedTexture2D::296654551586717615::1774476340::1774539844::1::::<><><>0<>0<>6b4229875f7b07b22eac32859bc15295<>res://.godot/imported/brazos mutant mosnter.png-ec3f3bd5e4aefaaa042fed5d70ce7d3d.s3tc.ctex::
+face mutant radition.png::CompressedTexture2D::243832883091369040::1774476340::1774539844::1::::<><><>0<>0<>22ec47b5364babc3cda038e3529d0ff4<>res://.godot/imported/face mutant radition.png-eb51e67d53bbf73ec203b3c6c776e480.s3tc.ctex::
+pantalones mutant.png::CompressedTexture2D::8341217990326130669::1774476340::1774539844::1::::<><><>0<>0<>257fd7e274c69ea7c5f7f251b5bab497<>res://.godot/imported/pantalones mutant.png-4fdfb39f0b43dfb6f29e80269d2df50c.s3tc.ctex::
+pierna mutant monster.png::CompressedTexture2D::1915140245935122795::1774476340::1774539843::1::::<><><>0<>0<>ccd0af0839b6a54d079028e27d5b16c6<>res://.godot/imported/pierna mutant monster.png-096a1bba38e45cc962eb740172ae8af6.s3tc.ctex::
+::res://assets/EndScreen/::1774361634
+LoseThemeLoop.wav::AudioStreamWAV::7147581184878018671::1774358644::1774358680::1::::<><><>0<>0<>d0a4a2b628dd6d40c6d463fbe7f0e476<>res://.godot/imported/LoseThemeLoop.wav-f62bfbf7a20a73a5d578b39ad3ed9171.sample::
+LoseThemeStart.wav::AudioStreamWAV::9088137478636762246::1774358639::1774358640::1::::<><><>0<>0<>029c2ce3d642a931a9fb839154308683<>res://.godot/imported/LoseThemeStart.wav-78a3b5b4696e149e963216552022e6f3.sample::
+Track_#4.wav::AudioStreamWAV::725532202537814291::1774361632::1774361634::1::::<><><>0<>0<>5c750512c6c06129276a5c2b7356fd59<>res://.godot/imported/Track_#4.wav-44ec7b5d64f625ef8b96c7f2d85b6d1f.sample::
+::res://assets/GameHud/::1774291037
+::res://assets/StartScreen/::1774291175
+background.jpg::CompressedTexture2D::3448444583403270687::1774291037::1774291175::1::::<><><>0<>0<>5a387b619d06a38d9a91212baf5b5d51<>res://.godot/imported/background.jpg-eef738cf54786fd5883533dfda7ee127.ctex::
+MainMenuMusic.wav::AudioStreamWAV::6603677651451778182::1774291037::1774291175::1::::<><><>0<>0<>b2a5025270655e8a971b01d3fbffa0f4<>res://.godot/imported/MainMenuMusic.wav-823988acfeddf6fa6581135965c6a1df.sample::
+Select.wav::AudioStreamWAV::8727861463119711352::1774291037::1774291175::1::::<><><>0<>0<>f319a8dd2116627a7969c36b35350c5a<>res://.godot/imported/Select.wav-e31e642715c7c951987b1d09c3e7e4fe.sample::
+::res://scenes/::1774561154
+battle_manager.tscn::PackedScene::5328673383644590412::1774561154::0::1::::<><><>0<>0<><>::uid://bc08nd651b2eg::::res://scenes/character.tscn<>uid://dr545wofb7a1y::::res://scripts/battle_manager.gd<>uid://br4cn8qn4o5gb::::res://scenes/hero_ui.tscn<>uid://bs4iogwg5nekb::::res://scripts/options.gd<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://qfakkt6qw5gj::::res://scenes/player_input.tscn<>uid://cwqgxkopk47cy::::res://scenes/boss.tscn<>uid://b7w4em8ptcnlt::::res://assets/BattleScene/696.jpg<>uid://ccwfln8vjdtt::::res://assets/BattleScene/MainBattleStart.wav<>uid://dw3ur66wi3tnh::::res://assets/BattleScene/MainBattleLoop.wav<>uid://cm166kagq0xfr::::res://assets/BattleScene/MainBattleEnd.wav
+boss.tscn::PackedScene::6350431894261117252::1774545648::0::1::::<><><>0<>0<><>::uid://dr7iaaao11n1u::::res://assets/CARCAXIS – Retro PSX Monster/ CARCAXIS.fbx<>uid://5yk51j01wwop::::res://scripts/boss.gd
+character.tscn::PackedScene::2580434897759582626::1774540417::0::1::::<><><>0<>0<><>::uid://ceg8v31811vbm::::res://scenes/hero.tscn<>uid://cglqbgixvjhww::::res://scripts/characters.gd<>uid://b41m5nbnyswf8::::res://assets/Animations.glb
+end_screen.tscn::PackedScene::960906986500331402::1774361644::0::1::::<><><>0<>0<><>::uid://bnjp48cy8dmuh::::res://scripts/end_screen.gd<>uid://bpepm4rf4ims2::::res://assets/StartScreen/background.jpg<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://d2qmkcy3omc3g::::res://assets/EndScreen/LoseThemeStart.wav<>uid://djc7daqyy4v6::::res://assets/Arrow.png<>uid://dwl3urh4d7bv1::::res://assets/StartScreen/Select.wav<>uid://c83lvahughgwt::::res://assets/EndScreen/LoseThemeLoop.wav<>uid://klpn6ibrdj6j::::res://assets/EndScreen/Track_#4.wav
+hero.tscn::PackedScene::5068025683249865234::1774540417::0::1::::<><><>0<>0<><>::uid://8b88ky2jhrgv::::res://scripts/hero.gd<>uid://b0r07s43ypcuo::::res://scripts/atb_timer.gd
+hero_ui.tscn::PackedScene::3639644388331106469::1774529074::0::1::::<><><>0<>0<><>::uid://ce1daybnkmh2m::::res://scripts/hero_ui.gd<>uid://dqaw2wt42da3w::::res://assets/ProgressWhite.png<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://rdolpna0fwnj::::res://assets/Skull&Bones - FrodoUndead.png
+player_input.tscn::PackedScene::1133361800933430429::1774285170::0::1::::<><><>0<>0<><>::uid://binwys1ah8gmj::::res://scripts/player_input.gd<>uid://djc7daqyy4v6::::res://assets/Arrow.png
+start_screen.tscn::PackedScene::4496360250638808605::1774556340::0::1::::<><><>0<>0<><>::uid://bpepm4rf4ims2::::res://assets/StartScreen/background.jpg<>uid://doe2e87jiltyn::::res://scripts/start_screen.gd<>uid://b8fo1w0xhaxon::::res://assets/NormalFont.ttf<>uid://djc7daqyy4v6::::res://assets/Arrow.png<>uid://c1c4uuwswi7t7::::res://assets/StartScreen/MainMenuMusic.wav<>uid://dwl3urh4d7bv1::::res://assets/StartScreen/Select.wav
+::res://scripts/::1774561154
+atb_timer.gd::GDScript::4177812258211532278::1774285170::0::1::::<>Timer<><>0<>0<><>::
+battle_manager.gd::GDScript::8416219269525758396::1774561154::0::1::::<>Node<><>0<>0<><>::
+boss.gd::GDScript::2155872499665082099::1774561054::0::1::::Boss<>Node3D<><>0<>0<><>::
+characters.gd::GDScript::5217656170759198870::1774557257::0::1::::<>Hero<><>0<>0<><>::
+end_screen.gd::GDScript::3318419331183644295::1774361697::0::1::::<>Control<><>0<>0<><>::
+Global.gd::GDScript::1337659831951998252::1774529074::0::1::::<>Node<><>0<>0<><>::
+hero.gd::GDScript::2320359373317169229::1774557257::0::1::::Hero<>CharacterBody3D<><>0<>0<><>::
+hero_ui.gd::GDScript::5107453977231897630::1774555824::0::1::::<>Control<><>0<>0<><>::
+options.gd::GDScript::3710197910541234285::1774285170::0::1::::<>Control<><>0<>0<><>::
+player_input.gd::GDScript::2976147962090593073::1774529074::0::1::::<>Node<><>0<>0<><>::
+Skull&Bones - FrodoUndead.png::CompressedTexture2D::7444123435667475435::1774529074::1774539843::1::::<><><>0<>0<>d7d694016ee124538f99e3250278b586<>res://.godot/imported/Skull&Bones - FrodoUndead.png-0dab6d2e9e361da997cd05f384eb69e4.ctex::
+start_screen.gd::GDScript::8151811658132670465::1774291037::0::1::::<>Control<><>0<>0<><>::
