@@ -1,7 +1,5 @@
-res://scripts/hero_ui.gd
-res://scenes/battle_manager.tscn
+res://scripts/battle_manager.gd
+res://scripts/boss.gd
 res://scripts/hero.gd
-res://scenes/test.tscn
-res://scenes/hero.tscn
-res://scenes/character.tscn
-res://scripts/characters.gd
+res://scenes/boss.tscn
+res://scenes/battle_manager.tscn

@@ -1,8 +1,10 @@
-Camera3D
-Node
-Sprite2D
-Node3D
 AudioStreamPlayer
+Node3D
+Node
+WorldEnvironment
+CSGBox3D
+Camera3D
+Sprite2D
 AnimationPlayer
 TextureRect
 Label
@@ -10,6 +12,3 @@ Node2D
 Control
 ColorRect
 Panel
-TextureProgressBar
-ProgressBar
-VBoxContainer
