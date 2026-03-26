@@ -36,6 +36,12 @@ func change_flag(boolean):
 	if get_parent():
 		get_parent().flag = boolean
 
+func can_change_flag():
+	for hero in get_parent().heroes:
+		if hero.get_atb_percent() < 1:
+			return false
+	return true
+
 func take_damage(amount : int):
 	if can_take_damage:
 		can_take_damage = false
