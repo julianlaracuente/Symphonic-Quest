@@ -11,16 +11,30 @@ class_name Boss
 
 
 # Attack1 (slash) and attack2 (bite)
-var attacks: Array[String] = ["Armature_009|Armature_011|mixamo_com|Layer0","Armature_009|Armature|mixamo_com|Layer0"]
+var idle = "Armature_009|Armature_010|mixamo_com|Layer0"
+var slash = "Armature_009|Armature_011|mixamo_com|Layer0"
+var bite = "Armature_009|Armature|mixamo_com|Layer0"
+var hurt = "Armature_009|Armature_002|mixamo_com|Layer0"
+var dying = "Armature_009|Armature_005|mixamo_com|Layer0"
+var attacks: Array[String] = [slash, bite]
 
 
-var can_attack = true
+var atb_complete = true
 var can_act = true
 var can_take_damage = true
 
 func _ready() -> void:
 	atb_timer.wait_time = atb_time
 	atb_timer.stop()
+	play_animation(idle)
+
+func can_attack():
+	if get_parent():
+		return get_parent().flag
+
+func change_flag(boolean):
+	if get_parent():
+		get_parent().flag = boolean
 
 func take_damage(amount : int):
 	if can_take_damage:
@@ -28,13 +42,13 @@ func take_damage(amount : int):
 		health -= max(amount-defense, 0)
 		health = max(health, 0)
 		if health > 0:
-			play_animation("Armature_009|Armature_002|mixamo_com|Layer0")
+			play_animation(hurt)
 		else:
 			death()
 
 func death():
-	play_animation("Armature_009|Armature_005|mixamo_com|Layer0")
-	can_attack = false
+	play_animation(dying)
+	atb_complete = false
 
 func is_alive():
 	return health > 0
@@ -46,19 +60,18 @@ func play_animation(animation : String):
 	if model.has_animation(animation):
 		model.play(animation)
 		await model.animation_finished
-		can_attack = true
-		can_take_damage = true
+		
 
 func attack():
-	if can_attack:
-		play_animation(attacks[randi_range(0,1)])
-		can_attack = false
+	if can_attack() and atb_complete:
+		change_flag(false)
+		var ability_int = randi_range(0,1)
+		play_animation(attacks[ability_int])
+		atb_complete = false
 		atb_timer.start()
 		print(name, ' : attack')
 
 
-func _on_timer_timeout() -> void:
-	can_attack = true
 
 func _process(delta: float) -> void:
 	pass
@@ -69,8 +82,16 @@ func get_atb_percent():
 	return 1.0 - (atb_timer.time_left / atb_timer.wait_time)
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-	#debug
-		attack()
-	if Input.is_action_just_pressed("ui_cancel"):
-		take_damage(499)
+	attack()
+
+
+func _on_atb_timer_timeout() -> void:
+	atb_complete = true
+	print("ATB Complete")
+
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	change_flag(true)
+	play_animation(idle)
+	print("Action free")
